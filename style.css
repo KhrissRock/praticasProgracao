@@ -1,0 +1,108 @@
+:root{
+    --cor-texto-destaque: white;
+    --cor-texto-secundario: black;
+    --cor-primaria: red;
+    --cor-secundaria: blue;
+    --cor-terciaria: green;
+}   
+
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100vw;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1,h2{
+    text-align: center;
+    color: var(--cor-primaria);
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+p{
+    text-align: justify;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.borda-solida-redonda-branca{
+    border-radius: 10px;
+    border: 2px solid var(--cor-texto-destaque);
+}
+
+.cor-fundo-branco{
+    background-color: var(--cor-texto-destaque);
+}
+
+.texto-destaque{
+    color: var(--cor-texto-destaque);
+}
+
+.texto-secundario{
+    color: var(--cor-texto-secundario);
+}
+
+.logo{
+    width: 5em;
+    height: calc(width*1.5);
+    object-fit: cover;
+}
+
+.titulo-logo{
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+#img-logo-faculdade{
+    width: 100px;
+    height: 100px;
+}
+
+.destaque{
+    color: white;
+    font-weight: bold;
+    background-color: brown;
+    padding: 10px;
+    margin-bottom: 10px;
+
+
+}
+
+.destaque:hover{
+    background-color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+.destaque:active{
+    background-color: var(--cor-secundaria);
+}
+
+.destaque:focus{
+    background-color: var(--cor-terciaria);
+}
+
+nav li{
+    list-style-type: none;
+    display: inline;
+    margin-right: 10px;
+}
+
+ul{
+    margin-left: 10px;
+}
