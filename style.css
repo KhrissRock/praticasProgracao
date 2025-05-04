@@ -1,9 +1,17 @@
 :root{
     --cor-texto-destaque: white;
     --cor-texto-secundario: black;
-    --cor-primaria: red;
+    --cor-primaria: rgb(163, 62, 62);
     --cor-secundaria: blue;
     --cor-terciaria: green;
+    --cor-fundo-baner: black;
+    --cor-fundo-destaque: brown;
+    --cor-fundo-secundario: lightgray;
+    --tamanho-titulo: 1.5em;
+    --tamanho-texto: 1.2em;
+    --tamanho-logo: 3em;
+    --tamanho-borda-destaque: 0.1em;
+    --tamanho-borda-destaque-radius: 1em;
 }   
 
 
@@ -12,15 +20,21 @@ body{
     padding: 0;
     width: 100%;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo-secundario);
 }
 
 header{
     width: 100vw;
-    background-color: black;
+    background-color: var(--cor-fundo-baner);
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 h1,h2{
@@ -34,7 +48,7 @@ h1{
 
 p{
     text-align: justify;
-    font-size: 1.2em;
+    font-size: var(--tamanho-texto);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -56,13 +70,25 @@ p{
 }
 
 .logo{
-    width: 5em;
+    width: 3em;
     height: calc(width*1.5);
     object-fit: cover;
 }
 
+nav li a{
+    text-decoration: none;
+    background-color: var(--cor-texto-secundario);
+    color: var(--cor-texto-destaque);
+    padding: 0.25em;
+}
+
+nav li a:hover{
+    background-color: var(--cor-texto-secundario);
+    color: var(--cor-texto-destaque);
+}
+
 .titulo-logo{
-    font-size: 1.5em;
+    font-size: var(--tamanho-titulo);
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -70,17 +96,15 @@ p{
 }
 
 #img-logo-faculdade{
-    width: 100px;
-    height: 100px;
+    width: var(--tamanho-logo);
+    height: var(--tamanho-logo);
 }
 
 .destaque{
-    color: white;
+    color: var(--cor-texto-destaque);
     font-weight: bold;
-    background-color: brown;
+    background-color: var(--cor-fundo-destaque);
     padding: 10px;
-    margin-bottom: 10px;
-
 
 }
 
@@ -100,9 +124,25 @@ p{
 nav li{
     list-style-type: none;
     display: inline;
-    margin-right: 10px;
+    padding-right: 1em;
 }
 
-ul{
-    margin-left: 10px;
+main{
+    position: relative;
+    margin: auto;
+    width: 80vw;
+    margin-top: 7em;
+    margin-bottom: 4em;
+}
+
+h2.destaque {
+    border: var(--tamanho-borda-destaque) solid var(--cor-fundo-destaque);
+    border-radius: var(--tamanho-borda-destaque-radius);
+}
+
+footer{
+    background-color: var(--cor-fundo-baner);
+    color: var(--cor-texto-destaque);
+    text-align: center;
+    padding: 1em;
 }
